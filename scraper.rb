@@ -40,8 +40,8 @@ def scrape_list(url)
       term: 8,
       start_date: date_from(tds[6].text)
     }
-    puts data
-    # ScraperWiki.save_sqlite([:name, :area, :term], data)
+    # puts data
+    ScraperWiki.save_sqlite([:name, :area, :term], data)
   end
 end
 
