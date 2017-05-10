@@ -36,7 +36,7 @@ def scrape_list(url)
     }
     # puts data
     # Let's assume there aren't two people in the same party with the same name
-    ScraperWiki.save_sqlite(%i(name party term), data)
+    ScraperWiki.save_sqlite(%i[name party term], data)
   end
 
   noko.xpath('//h3[contains(span,"Депутати, що вибули")]/following-sibling::table[1]/tr[td]').each do |tr|
@@ -51,7 +51,7 @@ def scrape_list(url)
       end_date:    date_from(tds[5].text),
     }
     # puts data
-    ScraperWiki.save_sqlite(%i(name party term), data)
+    ScraperWiki.save_sqlite(%i[name party term], data)
   end
 end
 
