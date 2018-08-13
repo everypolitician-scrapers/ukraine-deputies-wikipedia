@@ -14,7 +14,7 @@ def noko_for(url)
 end
 
 def date_from(text)
-  return if text.to_s.empty?
+  return if text.to_s.tidy.empty?
   Date.parse(text).to_s rescue binding.pry
 end
 
